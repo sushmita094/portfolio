@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700&display=swap");
+$scarlet: #d44a1e;
+$blue: #068a9c;
+$wine: #770f10;
+$brown: #83552d;
+$dust: #cab7ab;
+$text-dark: #310607;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  // font-family: consolas;
+  margin: 0;
+  color: black;
+}
+
+// navbar
+.navbar {
+  background-color: white;
+  position: relative;
+  z-index: 100;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 2px #eee;
+  font-size: 20px;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+
+  a {
+    font-size: 18px;
+    // color: $scarlet;
+    color: #444;
+    text-decoration: none;
+    margin-left: 30px;
+
+    @include mobile {
+      margin-left: 15px;
+    }
+  }
+}
+
+// about section
+section.about {
+  height: calc(100vh - 60px);
+  // background: rgba($dust, 0.1);
+  background: #eee;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mobile {
+    padding: 0 30px;
+  }
+
+  .hello {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 0 30px;
+  }
+
+  .bio {
+    font-size: 24px;
+    font-weight: 300;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin: 0 0 20px;
+  }
+}
+
+// projects section
+section.projects {
+  height: 100vh;
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  // background: rgba($dust, 0.1);
+  background: #eee;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px 0 20px;
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+
+    @include mobile {
+      grid-template-columns: none;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 10px;
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: 18px;
+      // color: rgba($text-dark, 0.8);
+      color: #333;
+      line-height: 1.5;
+    }
+  }
+}
+
+// skills section
+section.skills {
+  height: 100vh;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+  align-items: center;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .left {
+    font-size: 24px;
+    font-weight: 300;
+    // color: rgba($text-dark, 0.8);
+    color: #333;
+    margin-right: 60px;
+
+    @include mobile {
+      font-size: 18px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mobile {
+      grid-column-gap: 20px;
+    }
+
+    .skill {
+      // background: $scarlet;
+      background: #888;
+      color: white;
+      // box-shadow: inset 0 -2px #a03817;
+      font-size: 18px;
+      height: 50px;
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      border-radius: 25px;
+    }
+  }
+}
+
+// contact section
+section.contact {
+  padding: 100px;
+  // background: $wine;
+  background: #444;
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    padding: 30px;
+  }
+
+  .link {
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-size: 22px;
+    margin: 0 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(white, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(white, 0.15);
+    transition: all 0.2s ease;
+
+    @include mobile {
+      height: 30px;
+      width: 30px;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      border-color: white;
+      background-color: white;
+      color: $wine;
+    }
+  }
+}

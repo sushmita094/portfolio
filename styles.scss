@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap");
+
 $bg: rgb(16, 16, 24);
 $green: greenyellow;
 $blue: rgb(81, 214, 255);
@@ -26,7 +28,7 @@ $bright-red: rgb(254, 95, 85);
 }
 
 body {
-  font-family: consolas;
+  font-family: "Inconsolata", monospace;
   margin: 0;
   color: black;
 }

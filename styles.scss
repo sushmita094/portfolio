@@ -1,35 +1,48 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700&display=swap");
-$scarlet: #d44a1e;
-$blue: #068a9c;
-$wine: #770f10;
-$brown: #83552d;
-$dust: #cab7ab;
-$text-dark: #310607;
+$bg: rgb(16, 16, 24);
+$green: greenyellow;
+$blue: rgb(81, 214, 255);
+$orange: rgb(247, 142, 4);
+$yellow: rgb(243, 182, 31);
+$red: rgb(179, 32, 32);
+$text: rgb(155, 164, 182);
+$bright-red: rgb(254, 95, 85);
 
 @mixin mobile {
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
+@mixin tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Rubik", sans-serif;
-  // font-family: consolas;
+  font-family: consolas;
   margin: 0;
   color: black;
 }
 
 // navbar
 .navbar {
-  background-color: white;
-  position: relative;
+  background: $bg;
+  color: $blue;
+  position: sticky;
+  top: 0;
   z-index: 100;
   height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 50px;
-  box-shadow: 0 2px 2px #eee;
   font-size: 20px;
 
   @include mobile {
@@ -37,23 +50,27 @@ body {
   }
 
   a {
-    font-size: 18px;
-    // color: $scarlet;
-    color: #444;
+    font-size: 22px;
+    color: $blue;
     text-decoration: none;
-    margin-left: 30px;
+    margin: 0 20px;
+    transition: all 0.25s ease;
 
     @include mobile {
-      margin-left: 15px;
+      font-size: 20px;
+      margin: 0 15px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
     }
   }
 }
 
 // about section
 section.about {
-  height: calc(100vh - 60px);
-  // background: rgba($dust, 0.1);
-  background: #eee;
+  min-height: calc(100vh - 60px);
+  background: $bg;
   padding: 0 100px;
   display: flex;
   flex-direction: column;
@@ -65,16 +82,31 @@ section.about {
 
   .hello {
     font-size: 50px;
-    font-weight: 600;
+    font-weight: bold;
     margin: 0 0 30px;
+    color: $green;
+
+    @include tablet {
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   .bio {
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $text;
 
     @include mobile {
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    .orange {
+      color: $orange;
+      font-weight: bold;
     }
   }
 
@@ -83,24 +115,117 @@ section.about {
   }
 }
 
+// skills section
+section.skills {
+  background: rgba($bg, 0.97);
+  color: $text;
+  padding: 0 100px;
+
+  @include tablet {
+    padding: 0 60px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    align-items: center;
+    padding: 100px 0;
+
+    @include tablet {
+      display: block;
+      padding: 80px 0;
+    }
+
+    @include mobile {
+      display: block;
+      padding: 60px 0;
+    }
+  }
+
+  .left {
+    color: #bbc2e2;
+    font-size: 24px;
+    margin-right: 60px;
+    line-height: 1.5;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      line-height: 1.4;
+    }
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
+
+    @include mobile {
+      display: block;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      color: $bright-red;
+      margin-bottom: 25px;
+
+      @include mobile {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .skill {
+      font-size: 18px;
+      color: $green;
+
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 // projects section
 section.projects {
-  height: 100vh;
-  padding: 0 120px;
+  background: $bg;
+  padding: 60px 120px;
   display: flex;
   flex-direction: column;
-  // background: rgba($dust, 0.1);
-  background: #eee;
+  color: $text;
+
+  @include tablet {
+    padding: 0 60px;
+  }
 
   @include mobile {
     padding: 0 20px;
   }
 
   .title {
-    font-size: 26px;
-    font-weight: 600;
+    color: $blue;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 40px 0 40px;
   }
 
   .content {
@@ -123,113 +248,105 @@ section.projects {
     }
 
     .project-title {
-      font-size: 20px;
-      font-weight: 500;
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      color: $orange;
+      text-decoration: none;
+      position: relative;
+
+      @include mobile {
+        font-size: 22px;
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        content: "";
+        height: 3px;
+        background-color: $orange;
+        width: 0%;
+        transition: all 0.25s ease-out;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
     }
 
     .desc {
       font-size: 18px;
-      // color: rgba($text-dark, 0.8);
-      color: #333;
       line-height: 1.5;
-    }
-  }
-}
 
-// skills section
-section.skills {
-  height: 100vh;
-  padding: 0 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 50px;
-  align-items: center;
-
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 0 30px;
-  }
-
-  .left {
-    font-size: 24px;
-    font-weight: 300;
-    // color: rgba($text-dark, 0.8);
-    color: #333;
-    margin-right: 60px;
-
-    @include mobile {
-      font-size: 18px;
-      margin: 0 auto;
-      margin-bottom: 30px;
-    }
-  }
-
-  .right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    @include mobile {
-      grid-column-gap: 20px;
+      @include mobile {
+        font-size: 16px;
+      }
     }
 
-    .skill {
-      // background: $scarlet;
-      background: #888;
-      color: white;
-      // box-shadow: inset 0 -2px #a03817;
-      font-size: 18px;
-      height: 50px;
-      width: 120px;
+    .tech-used {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-      border-radius: 25px;
+      flex-wrap: wrap;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    .tech {
+      color: $green;
+
+      &:not(:last-child) {
+        &:after {
+          content: "";
+          background: $green;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0 10px;
+          vertical-align: middle;
+        }
+      }
     }
   }
 }
 
-// contact section
-section.contact {
-  padding: 100px;
-  // background: $wine;
-  background: #444;
-  display: flex;
-  justify-content: center;
+footer {
+  background: rgba($bg, 0.97);
+  color: rgba($text, 0.5);
+  padding: 16px 0;
+  text-align: center;
+  font-size: 14px;
 
   @include mobile {
-    padding: 30px;
+    font-size: 12px;
   }
 
-  .link {
-    height: 50px;
-    width: 50px;
-    color: white;
-    font-size: 22px;
-    margin: 0 20px;
-    border-radius: 50%;
-    border: 2px solid rgba(white, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    background-color: rgba(white, 0.15);
-    transition: all 0.2s ease;
-
-    @include mobile {
-      height: 30px;
-      width: 30px;
-      margin: 0 10px;
-      font-size: 16px;
-    }
-
-    &:hover {
-      border-color: white;
-      background-color: white;
-      color: $wine;
-    }
+  .fa-heart {
+    color: $red;
   }
+}
+
+// scrollbar
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #202030;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #2f2f47;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #3f3f5f;
 }

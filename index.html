@@ -15,21 +15,38 @@
   <body>
     <div class="wrapper">
       <div class="navbar">
-        <p>Sushmita</p>
-        <div>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Work</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <a
+          class="link"
+          href="https://www.linkedin.com/in/sushmita094/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          class="link"
+          href="https://twitter.com/sushmitacodes"
+          target="_blank"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="link" href="https://github.com/sushmita094" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="link" href="https://codepen.io/sushmita094" target="_blank">
+          <i class="fab fa-codepen"></i>
+        </a>
+        <a class="link" href="mailto:sushmita094@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
 
       <section class="about">
         <h1 class="hello">Hey, I'm Sushmita :)</h1>
         <div class="bio">
           <p>
-            I am a Frontend Developer based in India. React happens to be the
-            tool I use most frequently, but I like learning new tools and
-            frameworks very much.
+            I am a <span class="orange">Frontend Developer</span> based in
+            India. React happens to be the tool I use most frequently, but I
+            like learning new tools and frameworks very much.
           </p>
           <p>
             When it comes to Frontend Development, I really like the balance
@@ -37,25 +54,36 @@
             Development is like the best of both worlds for me.
           </p>
           <p>
-            When I'm not coding, you can find me playing my Guitar or buried in
-            a Novel!
+            When I'm not coding, you can find me singing, playing my Guitar or
+            buried in a Novel!
           </p>
         </div>
       </section>
 
       <section id="skills" class="skills">
-        <!--     <h2>Skills</h2> -->
-        <p class="left">
-          I like to code things from scratch, and I have a passion for creating
-          smooth user experiences.
-        </p>
-        <div class="right">
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">Javascript</div>
-          <div class="skill">React</div>
-          <div class="skill">Redux</div>
-          <div class="skill">Sass</div>
+        <div class="content">
+          <p class="left">
+            I like to code things from scratch, and I have a passion for
+            creating smooth user experiences.
+          </p>
+          <div class="right">
+            <div>
+              <p class="title">Core Skills:</p>
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">Javascript</div>
+              <div class="skill">Responsive Design</div>
+            </div>
+
+            <div>
+              <p class="title">Frameworks:</p>
+              <div class="skill">React</div>
+              <div class="skill">Redux</div>
+              <div class="skill">Nextjs</div>
+              <div class="skill">Sass</div>
+              <div class="skill">Bootstrap</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -64,44 +92,54 @@
         <div class="content">
           <div class="projects-grid">
             <div>
-              <p class="project-title">Bookipedia</p>
+              <a
+                class="project-title"
+                href="https://book-finder-react.netlify.app/"
+                target="_blank"
+                >Bookipedia</a
+              >
               <p class="desc">
                 Bookipedia is a book finder where you can find your favorite
                 books in the Google Books database and filter them on various
                 parameters.
               </p>
+              <div class="tech-used">
+                <span class="tech">Javascript</span>
+                <span class="tech">React</span>
+                <span class="tech">CSS</span>
+                <span class="tech">Sass</span>
+                <span class="tech">RESTful APIs</span>
+              </div>
             </div>
 
             <div>
-              <p class="project-title">Taskify</p>
+              <a
+                class="project-title"
+                href="https://notes-app-react.netlify.app/"
+                target="_blank"
+                >Taskify</a
+              >
               <p class="desc">
                 A simple and elegant solution for listing your tasks and
                 performing functions like edit and delete on the tasks. You can
                 also toggle between Light or Dark mode and your data is not lost
                 on page refresh.
               </p>
+              <div class="tech-used">
+                <span class="tech">Javascript</span>
+                <span class="tech">React</span>
+                <span class="tech">CSS</span>
+                <span class="tech">Sass</span>
+                <span class="tech">Local Storage</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <a class="link" href="https://www.linkedin.com/in/sushmita094/">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a class="link" href="https://twitter.com/sushmitacodes">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a class="link" href="https://github.com/sushmita094">
-          <i class="fab fa-github"></i>
-        </a>
-        <a class="link" href="https://codepen.io/sushmita094">
-          <i class="fab fa-codepen"></i>
-        </a>
-        <a class="link" href="mailto:sushmita094@gmail.com">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </section>
+      <footer>
+        Designed and developed by Sushmita Pandey <i class="fas fa-heart"></i>
+      </footer>
     </div>
   </body>
 </html>

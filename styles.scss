@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
 
 $bg: rgb(16, 16, 24);
-$red: #ee6055;
+$bg-light: #202030;
 $text: rgb(155, 164, 182);
 $text2: #bbc2e2;
 $text-white: #e2e5f3;
@@ -30,6 +31,7 @@ body {
   font-family: "Rubik", sans-serif;
   margin: 0;
   color: black;
+  background: $bg;
 }
 
 @keyframes drop {
@@ -45,6 +47,7 @@ body {
 
 .link-btn {
   font-family: "Inconsolata", monospace;
+  font-size: 16px;
   height: 44px;
   color: $theme;
   border: 1px solid $theme;
@@ -53,7 +56,6 @@ body {
   padding: 0 20px;
   text-decoration: none;
   border-radius: 4px;
-  letter-spacing: 0.7px;
   transition: all 0.1s ease-in;
 
   &:hover {
@@ -61,12 +63,30 @@ body {
   }
 }
 
+.section-title {
+  color: $text-white;
+  margin: 0 0 50px;
+  font-weight: 500;
+  font-family: "Inconsolata", monospace;
+
+  .number {
+    font-weight: 500;
+    color: rgba($text, 0.4);
+    font-size: 40px;
+    color: $theme;
+    opacity: 0.4;
+  }
+
+  .name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
 // navbar
 .navbar {
   font-family: "Inconsolata", monospace;
-  background: $bg;
   color: $text;
-  // position: sticky;
   top: 0;
   z-index: 100;
   height: 60px;
@@ -83,7 +103,7 @@ body {
     font-size: 18px;
     color: $theme;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 30px;
     transition: all 0.25s ease;
     animation: drop 0.3s ease-in;
     animation-fill-mode: forwards;
@@ -111,7 +131,6 @@ body {
 // about section
 section.about {
   min-height: calc(100vh - 60px);
-  background: $bg;
   padding: 0 100px;
   display: flex;
   flex-direction: row;
@@ -141,8 +160,9 @@ section.about {
   }
 
   .hello {
+    font-family: "Merriweather", serif;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0 0 30px;
     color: $text-white;
 
@@ -156,19 +176,19 @@ section.about {
   }
 
   .bio {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
     line-height: 1.4;
     color: $text;
-    margin-right: 60px;
+    width: 70%;
 
     @include mobile {
       font-size: 16px;
     }
 
-    .theme {
+    .link {
       color: $theme;
-      font-weight: 400;
+      text-decoration: none;
     }
   }
 
@@ -179,9 +199,8 @@ section.about {
 
 // skills section
 section.skills {
-  background: rgba($bg, 0.97);
   color: $text;
-  padding: 0 100px;
+  padding: 100px;
   font-weight: 300;
 
   @include tablet {
@@ -195,28 +214,26 @@ section.skills {
     padding: 0 30px;
   }
 
-  .content {
+  .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-column-gap: 50px;
     align-items: center;
-    padding: 100px 0;
 
     @include tablet {
       display: block;
-      padding: 80px 0;
+      // padding: 80px 0;
     }
 
     @include mobile {
       display: block;
-      padding: 60px 0;
+      // padding: 60px 0;
     }
   }
 
   .left {
     color: $text2;
-    font-size: 24px;
-
+    font-size: 20px;
     margin-right: 60px;
     line-height: 1.5;
 
@@ -233,9 +250,9 @@ section.skills {
   }
 
   .right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px 10px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-gap: 10px 10px;
 
     @include mobile {
       display: block;
@@ -270,7 +287,6 @@ section.skills {
 
 // projects section
 section.projects {
-  background: $bg;
   padding: 60px 120px;
   display: flex;
   flex-direction: column;
@@ -302,9 +318,9 @@ section.projects {
   }
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 60px;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-column-gap: 60px;
 
     @include mobile {
       grid-template-columns: none;
@@ -312,11 +328,32 @@ section.projects {
       grid-row-gap: 10px;
     }
 
+    .project-card {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+
+      &:not(:first-child) {
+        margin-top: 100px;
+      }
+
+      // .card-right {
+      // }
+    }
+
+    .image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 50px;
+    }
+
     .project-title {
       display: inline-block;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 500;
-      color: $theme;
+      color: $text-white;
       text-decoration: none;
       position: relative;
 
@@ -343,8 +380,11 @@ section.projects {
     }
 
     .desc {
-      font-size: 18px;
+      // font-size: 14px;
       line-height: 1.5;
+      background-color: $bg-light;
+      border-radius: 4px;
+      padding: 10px;
 
       @include mobile {
         font-size: 16px;
@@ -352,6 +392,7 @@ section.projects {
     }
 
     .tech-used {
+      font-size: 14px;
       display: flex;
       flex-wrap: wrap;
 
@@ -382,7 +423,6 @@ section.projects {
 // blog
 section.blog {
   min-height: 100vh;
-  background: $bg;
   color: $text;
   padding: 60px 100px;
 
@@ -402,7 +442,7 @@ section.blog {
   }
 
   .blog-card {
-    background-color: #202030;
+    background-color: $bg-light;
     border-radius: 5px;
     padding: 20px;
     display: flex;
@@ -460,9 +500,9 @@ section.blog {
 }
 
 footer {
-  background: $bg;
   color: rgba($text, 0.5);
   padding: 16px 0;
+  padding-top: 100px;
   text-align: center;
   font-size: 14px;
 
@@ -478,7 +518,7 @@ footer {
 
 /* Track */
 *::-webkit-scrollbar-track {
-  background: #202030;
+  background: $bg-light;
 }
 
 /* Handle */

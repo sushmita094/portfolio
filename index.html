@@ -22,14 +22,38 @@
       </div>
 
       <section class="about">
-        <img src="photo.jpg" class="photo" />
+        <!-- <img src="photo.jpg" class="photo" /> -->
         <div>
           <h1 class="hello">Hey, I'm Sushmita!</h1>
           <div class="bio">
             <p>
-              I am a <span class="theme">Frontend Developer</span> based in
-              India. React happens to be the tool I use most frequently, but I
-              like learning new tools and frameworks very much.
+              I am a frontend developer at
+              <a class="link" href="#">Squareboat</a>. I love creating amazing
+              User Interfaces that people enjoy using. I also write about tech
+              on my <a class="link" href="#">Blog</a> and share my journey on
+              <a class="link" href="#">Twitter</a>.
+            </p>
+            <!-- 
+            <a class="link-btn" href="mailto:sushmita094@gmail.com"
+              >Get In Touch</a
+            > -->
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <h2 class="section-title">
+          <span class="number">01.</span>
+          <span class="name">About Me</span>
+        </h2>
+        <div class="grid">
+          <div class="left">
+            <p>
+              Hi, I'm Sushmita Pandey. React happens to be the tool I use most
+              frequently, but I like learning new tools and frameworks very
+              much. Currently, I have been working as a Frontend Developer at
+              Squareboat. I like to code things from scratch, and I have a
+              passion for creating smooth user experiences.
             </p>
             <p>
               When it comes to Frontend Development, I really like the balance
@@ -41,80 +65,76 @@
               buried in a Novel!
             </p>
           </div>
-        </div>
-      </section>
-
-      <section id="skills" class="skills">
-        <div class="content">
-          <p class="left">
-            I like to code things from scratch, and I have a passion for
-            creating smooth user experiences.
-          </p>
           <div class="right">
-            <div>
-              <p class="title">Core Skills:</p>
-              <div class="skill">HTML</div>
-              <div class="skill">CSS</div>
-              <div class="skill">Javascript</div>
-              <div class="skill">Responsive Design</div>
-            </div>
-
-            <div>
-              <p class="title">Frameworks:</p>
-              <div class="skill">React</div>
-              <div class="skill">Redux</div>
-              <div class="skill">Nextjs</div>
-              <div class="skill">Sass</div>
-              <div class="skill">Bootstrap</div>
-            </div>
+            <p class="title">Skills and Frameworks:</p>
+            <ul>
+              <li class="skill">HTML</li>
+              <li class="skill">CSS</li>
+              <li class="skill">Javascript</li>
+              <li class="skill">Responsive Design</li>
+              <li class="skill">React</li>
+              <li class="skill">Redux</li>
+              <li class="skill">Nextjs</li>
+              <li class="skill">Sass</li>
+              <li class="skill">Bootstrap</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section id="projects" class="projects">
-        <h2 class="title">Work</h2>
+        <h2 class="section-title">
+          <span class="number">02.</span>
+          <span class="name">Work</span>
+        </h2>
         <div class="content">
           <div class="projects-grid">
-            <div>
-              <a
-                class="project-title"
-                href="https://book-finder-react.netlify.app/"
-                target="_blank"
-                >Bookipedia</a
-              >
-              <p class="desc">
-                Bookipedia is a book finder where you can find your favorite
-                books in the Google Books database and filter them on various
-                parameters.
-              </p>
-              <div class="tech-used">
-                <span class="tech">Javascript</span>
-                <span class="tech">React</span>
-                <span class="tech">CSS</span>
-                <span class="tech">Sass</span>
-                <span class="tech">RESTful APIs</span>
+            <div class="project-card">
+              <img class="image" src="taskify.png" />
+              <div class="card-right">
+                <a
+                  class="project-title"
+                  href="https://book-finder-react.netlify.app/"
+                  target="_blank"
+                  >Bookipedia</a
+                >
+                <p class="desc">
+                  Bookipedia is a book finder where you can find your favorite
+                  books in the Google Books database and filter them on various
+                  parameters.
+                </p>
+                <div class="tech-used">
+                  <span class="tech">Javascript</span>
+                  <span class="tech">React</span>
+                  <span class="tech">CSS</span>
+                  <span class="tech">Sass</span>
+                  <span class="tech">RESTful APIs</span>
+                </div>
               </div>
             </div>
 
-            <div>
-              <a
-                class="project-title"
-                href="https://notes-app-react.netlify.app/"
-                target="_blank"
-                >Taskify</a
-              >
-              <p class="desc">
-                A simple and elegant solution for listing your tasks and
-                performing functions like edit and delete on the tasks. You can
-                also toggle between Light or Dark mode and your data is not lost
-                on page refresh.
-              </p>
-              <div class="tech-used">
-                <span class="tech">Javascript</span>
-                <span class="tech">React</span>
-                <span class="tech">CSS</span>
-                <span class="tech">Sass</span>
-                <span class="tech">Local Storage</span>
+            <div class="project-card">
+              <img class="image" src="taskify.png" />
+              <div>
+                <a
+                  class="project-title"
+                  href="https://notes-app-react.netlify.app/"
+                  target="_blank"
+                  >Taskify</a
+                >
+                <p class="desc">
+                  A simple and elegant solution for listing your tasks and
+                  performing functions like edit and delete on the tasks. You
+                  can also toggle between Light or Dark mode and your data is
+                  not lost on page refresh.
+                </p>
+                <div class="tech-used">
+                  <span class="tech">Javascript</span>
+                  <span class="tech">React</span>
+                  <span class="tech">CSS</span>
+                  <span class="tech">Sass</span>
+                  <span class="tech">Local Storage</span>
+                </div>
               </div>
             </div>
           </div>
@@ -122,7 +142,10 @@
       </section>
 
       <section class="blog">
-        <h2 class="title">Blog</h2>
+        <h2 class="section-title">
+          <span class="number">03.</span>
+          <span class="name">Blog</span>
+        </h2>
 
         <div class="content">
           <div class="blog-card">

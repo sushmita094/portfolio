@@ -1,0 +1,101 @@
+// about section
+section.about {
+  color: $text2;
+  padding: 100px;
+  font-weight: 300;
+
+  @include tablet {
+    padding: 60px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    // align-items: center;
+
+    @include tablet {
+      // display: block;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .left {
+    font-size: 19px;
+    margin-right: 20px;
+    line-height: 1.5;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+  }
+
+  .right {
+    @include mobile {
+      display: block;
+    }
+
+    .title {
+      font-size: 20px;
+      color: $theme;
+      margin: 0 0 30px;
+
+      @include mobile {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
+    // ul {
+    //   // list-style: none;
+    //   // list-style-image: url("../star.svg");
+    //   padding-left: 0;
+    // }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 24px;
+
+      .skill {
+        font-size: 17px;
+        // color: $text;
+
+        @include mobile {
+          font-size: 16px;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background-image: url("../star-2.svg");
+          background-size: 14px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

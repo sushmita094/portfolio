@@ -1,0 +1,136 @@
+// projects section
+section.projects {
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  color: $text;
+  font-weight: 300;
+
+  @include tablet {
+    padding: 0 60px;
+  }
+
+  @include mobile {
+    padding: 40px 30px 0;
+  }
+
+  .title {
+    color: $text2;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px 0 40px;
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .projects-grid {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-column-gap: 60px;
+
+    @include mobile {
+      grid-template-columns: none;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 10px;
+    }
+
+    .project-card {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+
+      &:not(:first-child) {
+        margin-top: 100px;
+      }
+
+      @include mobile {
+        display: block;
+        width: 100%;
+      }
+
+      // .card-right {
+      // }
+    }
+
+    .image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 50px;
+    }
+
+    .project-title {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 500;
+      color: $text-white;
+      text-decoration: none;
+      position: relative;
+
+      @include mobile {
+        font-size: 22px;
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        content: "";
+        height: 3px;
+        background-color: $text;
+        width: 0%;
+        transition: all 0.25s ease-out;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .desc {
+      // font-size: 14px;
+      line-height: 1.5;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    .tech-used {
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    .tech {
+      color: $theme;
+
+      &:not(:last-child) {
+        &:after {
+          content: "";
+          background: $theme;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

@@ -16,12 +16,12 @@
     <div class="wrapper">
       <div class="navbar">
         <a class="item1" href="#">About</a>
-        <a class="item2" href="#">Work</a>
-        <a class="item3" href="#">Blog</a>
+        <a class="item2" href="#" onclick="scrollToSection('work')">Projects</a>
+        <a class="item3" href="#" onclick="scrollToSection('blog')">Blog</a>
         <a class="item4" href="mailto:sushmita094@gmail.com">Contact</a>
       </div>
 
-      <section class="about">
+      <section class="hero">
         <!-- <img src="photo.jpg" class="photo" /> -->
         <div>
           <h1 class="hello">Hey, I'm Sushmita!</h1>
@@ -30,18 +30,54 @@
               I am a frontend developer at
               <a class="link" href="#">Squareboat</a>. I love creating amazing
               User Interfaces that people enjoy using. I also write about tech
-              on my <a class="link" href="#">Blog</a> and share my journey on
-              <a class="link" href="#">Twitter</a>.
+              on my <a class="link" href="https://sushmita.hashnode.dev/">Blog</a> and share my journey on
+              <a class="link" href="https://twitter.com/sushmitacodes">Twitter</a>.
             </p>
             <!-- 
             <a class="link-btn" href="mailto:sushmita094@gmail.com"
               >Get In Touch</a
             > -->
           </div>
+          <div class="social">
+            <a
+              class="link"
+              href="https://www.linkedin.com/in/sushmita094/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              class="link"
+              href="https://twitter.com/sushmitacodes"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              class="link"
+              href="https://github.com/sushmita094"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              class="link"
+              href="https://codepen.io/sushmita094"
+              target="_blank"
+            >
+              <i class="fab fa-codepen"></i>
+            </a>
+            <a class="link" href="https://dev.to/sushmita094" target="_blank">
+              <i class="fab fa-dev"></i>
+            </a>
+            <a class="link" href="mailto:sushmita094@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section id="skills" class="skills">
+      <section class="about">
         <h2 class="section-title">
           <span class="number">01.</span>
           <span class="name">About Me</span>
@@ -67,25 +103,26 @@
           </div>
           <div class="right">
             <p class="title">Skills and Frameworks:</p>
-            <ul>
-              <li class="skill">HTML</li>
-              <li class="skill">CSS</li>
-              <li class="skill">Javascript</li>
-              <li class="skill">Responsive Design</li>
-              <li class="skill">React</li>
-              <li class="skill">Redux</li>
-              <li class="skill">Nextjs</li>
-              <li class="skill">Sass</li>
-              <li class="skill">Bootstrap</li>
+            <div class="skills-grid">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">Javascript</div>
+              <div class="skill">Responsive Design</div>
+              <div class="skill">React</div>
+              <div class="skill">Redux</div>
+              <div class="skill">Nextjs</div>
+              <div class="skill">Sass</div>
+              <div class="skill">Git</div>
+              <div class="skill">React Native</div>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="projects">
+      <section id="work" class="projects">
         <h2 class="section-title">
           <span class="number">02.</span>
-          <span class="name">Work</span>
+          <span class="name">Projects</span>
         </h2>
         <div class="content">
           <div class="projects-grid">
@@ -141,67 +178,67 @@
         </div>
       </section>
 
-      <section class="blog">
+      <section id="blog" class="blog">
         <h2 class="section-title">
           <span class="number">03.</span>
           <span class="name">Blog</span>
         </h2>
 
         <div class="content">
-          <div class="blog-card">
-            <div>
-              <div class="link">
-                <i class="fas fa-link"></i>
+          <a href="#" class="blog-card-link">
+            <div class="blog-card">
+              <div>
+                <p class="blog-title">
+                  How to use React Hooks - 2 most commonly used Hooks explained
+                  ✨
+                </p>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
+                  quidem beatae, eum recusandae sint iste aspernatur
+                </p>
               </div>
-              <p class="blog-title">
-                How to use React Hooks - 2 most commonly used Hooks explained ✨
-              </p>
-              <p class="desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
-                quidem beatae, eum recusandae sint iste aspernatur
-              </p>
+              <div class="tags">
+                <span>Javascript</span>
+                <span>React</span>
+              </div>
             </div>
-            <div class="tags">
-              <span>Javascript</span>
-              <span>React</span>
-            </div>
-          </div>
+          </a>
 
-          <div class="blog-card">
-            <div>
-              <div class="link">
-                <i class="fas fa-link"></i>
+          <a href="#" class="blog-card-link">
+            <div class="blog-card">
+              <div>
+                <p class="blog-title">
+                  10 tips to crack the Frontend Interview
+                </p>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
+                  quidem beatae, eum recusandae sint iste aspernatur
+                </p>
               </div>
-              <p class="blog-title">10 tips to crack the Frontend Interview</p>
-              <p class="desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
-                quidem beatae, eum recusandae sint iste aspernatur
-              </p>
+              <div class="tags">
+                <span>Javascript</span>
+                <span>React</span>
+              </div>
             </div>
-            <div class="tags">
-              <span>Javascript</span>
-              <span>React</span>
-            </div>
-          </div>
+          </a>
 
-          <div class="blog-card">
-            <div>
-              <div class="link">
-                <i class="fas fa-link"></i>
+          <a href="#" class="blog-card-link">
+            <div class="blog-card">
+              <div>
+                <p class="blog-title">A complete guide to CSS Flexbox ✨</p>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus illo minus quis, necessitatibus tenetur dolor.
+                </p>
               </div>
-              <p class="blog-title">A complete guide to CSS Flexbox ✨</p>
-              <p class="desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus illo minus quis, necessitatibus tenetur dolor.
-              </p>
+              <div class="tags">
+                <span>Javascript</span>
+                <span>React</span>
+              </div>
             </div>
-            <div class="tags">
-              <span>Javascript</span>
-              <span>React</span>
-            </div>
-          </div>
+          </a>
         </div>
         <div class="btn-wrapper">
           <a
@@ -213,33 +250,9 @@
         </div>
       </section>
 
-      <div class="social">
-        <a
-          class="link"
-          href="https://www.linkedin.com/in/sushmita094/"
-          target="_blank"
-        >
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a
-          class="link"
-          href="https://twitter.com/sushmitacodes"
-          target="_blank"
-        >
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a class="link" href="https://github.com/sushmita094" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a class="link" href="https://codepen.io/sushmita094" target="_blank">
-          <i class="fab fa-codepen"></i>
-        </a>
-        <a class="link" href="mailto:sushmita094@gmail.com" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-
       <footer>Designed and developed by Sushmita Pandey</footer>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

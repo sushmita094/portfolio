@@ -1,0 +1,109 @@
+// ********* ANIMATIONS *********
+@keyframes drop {
+  from {
+    transform: translateY(-15px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes drop2 {
+  from {
+    transform: translateY(-30px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFromRight {
+  from {
+    transform: translateX(10px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+body {
+  --duration: 0.1s;
+  --delay: 0.075s;
+}
+
+.navbar {
+  a {
+    animation: drop 0.25s ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    &.item2 {
+      animation-delay: var(--duration);
+    }
+
+    &.item3 {
+      animation-delay: calc(var(--delay) + var(--duration));
+    }
+
+    &.item4 {
+      animation-delay: calc(calc(2 * var(--delay)) + var(--duration));
+    }
+  }
+}
+
+section.hero {
+  --duration: 0.35s;
+  --delay: 0.2s;
+
+  .hello {
+    animation: drop2 0.3s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: var(--duration);
+    opacity: 0;
+  }
+
+  .bio {
+    animation: drop2 0.3s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: calc(var(--delay) + var(--duration));
+    opacity: 0;
+  }
+}
+
+.social {
+  --duration: 0.8s;
+  --delay: 0.1s;
+
+  a {
+    animation: fadeFromRight 0.3s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: var(--duration);
+    opacity: 0;
+
+    &:nth-child(2) {
+      animation-delay: calc(var(--delay) + var(--duration));
+    }
+
+    &:nth-child(3) {
+      animation-delay: calc((2 * var(--delay)) + var(--duration));
+    }
+
+    &:nth-child(4) {
+      animation-delay: calc((3 * var(--delay)) + var(--duration));
+    }
+
+    &:nth-child(5) {
+      animation-delay: calc((4 * var(--delay)) + var(--duration));
+    }
+
+    &:nth-child(6) {
+      animation-delay: calc((5 * var(--delay)) + var(--duration));
+    }
+  }
+}

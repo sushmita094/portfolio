@@ -1,0 +1,151 @@
+$bg: #101018;
+$bg-light: #202030;
+$text: #9ba4b6;
+$text2: #bbc2e2;
+$text-white: #e2e5f3;
+$theme: #5cffa8;
+// green - #5cffa8, lime - #cbff4d, limegreen - #adff2f
+$theme-bg: #00210f;
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mobile_and_tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: white;
+  background: #00833d;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  color: black;
+  background: $bg;
+}
+
+.link-btn {
+  font-family: "Inconsolata", monospace;
+  font-size: 16px;
+  height: 44px;
+  color: $theme;
+  border: 1px solid $theme;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    background-color: $theme-bg;
+  }
+}
+
+.section-title {
+  color: $text-white;
+  margin: 0 0 50px;
+  font-weight: 500;
+  font-family: "Inconsolata", monospace;
+
+  @include mobile {
+    margin: 0 0 30px;
+  }
+
+  .number {
+    font-size: 36px;
+    font-weight: 500;
+    color: rgba($theme, 0.6);
+  }
+
+  .name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+// scrollbar
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: $bg-light;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #2f2f47;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #3f3f5f;
+}
+
+// footer styles
+footer {
+  color: rgba($text, 0.7);
+  color: rgba($theme, 0.6);
+  padding: 16px 0;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 14px;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+// social
+.social {
+  position: fixed;
+  right: 24px;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+
+  @include mobile_and_tablet {
+    position: relative;
+    flex-direction: row;
+    padding: 0 20px;
+  }
+
+  a {
+    font-size: 20px;
+    color: rgba($text2, 0.8);
+    padding: 10px;
+    margin: 4px 0;
+    transition: all 0.25s ease-in;
+
+    &:hover {
+      color: $theme;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+}

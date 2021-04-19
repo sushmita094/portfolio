@@ -99,7 +99,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .social {
     position: relative;
     flex-direction: row;
@@ -156,8 +156,8 @@ footer {
 }
 @media (max-width: 767px) {
   .navbar a {
-    font-size: 16px;
-    margin: 0 15px;
+    font-size: 15px;
+    margin: 0;
   }
 }
 
@@ -273,7 +273,7 @@ section.about .left {
 }
 @media (max-width: 767px) {
   section.about .left {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 auto;
     margin-bottom: 40px;
     line-height: 1.4;
@@ -294,8 +294,7 @@ section.about .right .title {
 }
 @media (max-width: 767px) {
   section.about .right .title {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 17px;
   }
 }
 section.about .right .skills-grid {
@@ -369,6 +368,11 @@ section.projects .projects-grid .project-card:not(:first-child) {
   margin-top: 100px;
 }
 @media (max-width: 767px) {
+  section.projects .projects-grid .project-card:not(:first-child) {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767px) {
   section.projects .projects-grid .project-card {
     display: block;
     width: 100%;
@@ -380,6 +384,11 @@ section.projects .projects-grid .image {
   object-fit: cover;
   margin-right: 50px;
 }
+@media (max-width: 767px) {
+  section.projects .projects-grid .image {
+    margin-right: 0;
+  }
+}
 section.projects .projects-grid .project-title {
   display: inline-block;
   font-size: 22px;
@@ -390,7 +399,8 @@ section.projects .projects-grid .project-title {
 }
 @media (max-width: 767px) {
   section.projects .projects-grid .project-title {
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: 20px;
   }
 }
 section.projects .projects-grid .project-title::after {
@@ -411,7 +421,7 @@ section.projects .projects-grid .desc {
 }
 @media (max-width: 767px) {
   section.projects .projects-grid .desc {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 section.projects .projects-grid .tech-used {
@@ -497,6 +507,11 @@ section.blog .blog-card .blog-title {
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 20px;
+}
+@media (max-width: 767px) {
+  section.blog .blog-card .blog-title {
+    font-size: 18px;
+  }
 }
 section.blog .blog-card .desc {
   font-size: 14px;

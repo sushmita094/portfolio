@@ -40,7 +40,7 @@ section.about {
     }
 
     @include mobile {
-      font-size: 18px;
+      font-size: 16px;
       margin: 0 auto;
       margin-bottom: 40px;
       line-height: 1.4;
@@ -62,8 +62,7 @@ section.about {
       margin: 0 0 30px;
 
       @include mobile {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 17px;
       }
     }
 

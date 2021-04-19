@@ -49,15 +49,16 @@ section.projects {
 
       &:not(:first-child) {
         margin-top: 100px;
+
+        @include mobile {
+          margin-top: 60px;
+        }
       }
 
       @include mobile {
         display: block;
         width: 100%;
       }
-
-      // .card-right {
-      // }
     }
 
     .image {
@@ -65,6 +66,10 @@ section.projects {
       height: 200px;
       object-fit: cover;
       margin-right: 50px;
+
+      @include mobile {
+        margin-right: 0;
+      }
     }
 
     .project-title {
@@ -76,7 +81,8 @@ section.projects {
       position: relative;
 
       @include mobile {
-        font-size: 22px;
+        font-size: 20px;
+        margin-top: 20px;
       }
 
       &::after {
@@ -102,7 +108,7 @@ section.projects {
       line-height: 1.5;
 
       @include mobile {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
 

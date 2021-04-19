@@ -20,7 +20,7 @@ $theme-bg: #00210f;
 }
 
 @mixin mobile_and_tablet {
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (max-width: 1023px) {
     @content;
   }
 }

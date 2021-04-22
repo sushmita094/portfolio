@@ -15,6 +15,12 @@ section.hero {
     padding: 0 30px;
   }
 
+  @include large_screen {
+    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+  }
+
   .photo {
     width: 200px;
     height: 200px;
@@ -45,7 +51,15 @@ section.hero {
     }
 
     @include mobile {
+      font-size: 28px;
+    }
+
+    @include iphone5 {
       font-size: 24px;
+    }
+
+    @include large_screen {
+      font-size: 60px;
     }
   }
 
@@ -76,6 +90,10 @@ section.hero {
 
     @include mobile {
       margin: 0;
+    }
+
+    @include iphone5 {
+      font-size: 15px;
     }
   }
 }

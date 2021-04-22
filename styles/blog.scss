@@ -1,11 +1,20 @@
 // blog
 section.blog {
-  min-height: 100vh;
   color: $text;
   padding: 60px 100px;
 
+  @include tablet {
+    padding: 60px 30px;
+  }
+
   @include mobile {
     padding: 40px 30px;
+  }
+
+  @include large_screen {
+    padding: 60px 0;
+    width: 60%;
+    margin: 0 auto;
   }
 
   .title {
@@ -17,6 +26,13 @@ section.blog {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
     margin-bottom: 40px;
+
+    @include tablet {
+      grid-template-columns: none;
+      grid-row-gap: 30px;
+      width: 80%;
+      margin: 0 auto 40px;
+    }
 
     @include mobile {
       grid-template-columns: none;
@@ -54,6 +70,10 @@ section.blog {
       }
     }
 
+    @include tablet {
+      background-color: unset;
+    }
+
     .link {
       font-size: 18px;
       text-align: right;
@@ -69,12 +89,20 @@ section.blog {
       @include mobile {
         font-size: 18px;
       }
+
+      @include tablet {
+        margin-bottom: 12px;
+      }
     }
 
     .desc {
       font-size: 14px;
       line-height: 1.4;
       margin: 0 0 40px;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
     }
 
     .tags {

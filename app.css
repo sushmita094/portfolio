@@ -432,42 +432,20 @@ section.projects .content {
   }
 }
 section.projects .projects-grid .project-card {
-  display: flex;
-  align-items: center;
   width: 80%;
   margin: 0 auto;
 }
 section.projects .projects-grid .project-card:not(:first-child) {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 @media (max-width: 767px) {
   section.projects .projects-grid .project-card:not(:first-child) {
-    margin-top: 60px;
+    margin-top: 50px;
   }
 }
-@media (max-width: 767px) {
-  section.projects .projects-grid .project-card {
-    display: block;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   section.projects .projects-grid .project-card {
     width: 100%;
-  }
-}
-section.projects .projects-grid .image {
-  width: 300px;
-  height: 180px;
-  object-fit: contain;
-  margin-right: 50px;
-}
-@media (max-width: 767px) {
-  section.projects .projects-grid .image {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
-    margin-right: 0;
   }
 }
 section.projects .projects-grid .project-title {
@@ -477,56 +455,26 @@ section.projects .projects-grid .project-title {
   color: #e2e5f3;
   text-decoration: none;
   position: relative;
+  margin: 0 0 20px;
 }
 @media (max-width: 767px) {
   section.projects .projects-grid .project-title {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
   }
 }
-section.projects .projects-grid .project-title::after {
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  content: "";
-  height: 3px;
-  background-color: #9ba4b6;
-  width: 0%;
-  transition: all 0.25s ease-out;
-}
-section.projects .projects-grid .project-title:hover::after {
-  width: 100%;
+section.projects .projects-grid .project-title .theme {
+  color: #5cffa8;
 }
 section.projects .projects-grid .desc {
+  font-size: 18px;
+  margin: 0;
   line-height: 1.5;
 }
 @media (max-width: 767px) {
   section.projects .projects-grid .desc {
     font-size: 15px;
   }
-}
-section.projects .projects-grid .tech-used {
-  font-size: 14px;
-  display: flex;
-  flex-wrap: wrap;
-}
-@media (max-width: 767px) {
-  section.projects .projects-grid .tech-used {
-    font-size: 14px;
-  }
-}
-section.projects .projects-grid .tech {
-  color: #5cffa8;
-}
-section.projects .projects-grid .tech:not(:last-child):after {
-  content: "";
-  background: #5cffa8;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 10px;
-  vertical-align: middle;
 }
 
 section.blog {

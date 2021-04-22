@@ -37,10 +37,6 @@ section.projects {
   }
 
   .projects-grid {
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-column-gap: 60px;
-
     @include mobile {
       grid-template-columns: none;
       grid-template-rows: repeat(2, 1fr);
@@ -48,46 +44,20 @@ section.projects {
     }
 
     .project-card {
-      display: flex;
-      align-items: center;
       width: 80%;
       margin: 0 auto;
 
       &:not(:first-child) {
-        margin-top: 100px;
+        margin-top: 60px;
 
         @include mobile {
-          margin-top: 60px;
+          margin-top: 50px;
         }
       }
 
-      @include mobile {
-        display: block;
+      @include mobile_and_tablet {
         width: 100%;
       }
-
-      @include tablet {
-        width: 100%;
-      }
-    }
-
-    .image {
-      width: 300px;
-      height: 180px;
-      object-fit: contain;
-      margin-right: 50px;
-
-      @include mobile {
-        width: 80%;
-        height: auto;
-        margin-left: 10%;
-        margin-right: 0;
-      }
-
-      // @include mobile {
-      //   width: 270px;
-      //   height: 180px;
-      // }
     }
 
     .project-title {
@@ -97,63 +67,25 @@ section.projects {
       color: $text-white;
       text-decoration: none;
       position: relative;
+      margin: 0 0 20px;
 
       @include mobile {
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 20px;
       }
 
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        content: "";
-        height: 3px;
-        background-color: $text;
-        width: 0%;
-        transition: all 0.25s ease-out;
-      }
-
-      &:hover {
-        &::after {
-          width: 100%;
-        }
+      .theme {
+        color: $theme;
       }
     }
 
     .desc {
-      // font-size: 14px;
+      font-size: 18px;
+      margin: 0;
       line-height: 1.5;
 
       @include mobile {
         font-size: 15px;
-      }
-    }
-
-    .tech-used {
-      font-size: 14px;
-      display: flex;
-      flex-wrap: wrap;
-
-      @include mobile {
-        font-size: 14px;
-      }
-    }
-
-    .tech {
-      color: $theme;
-
-      &:not(:last-child) {
-        &:after {
-          content: "";
-          background: $theme;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          display: inline-block;
-          margin: 0 10px;
-          vertical-align: middle;
-        }
       }
     }
   }

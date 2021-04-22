@@ -1,256 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="app.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Sushmita's Portfolio</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="navbar">
-        <a class="item1" href="#">About</a>
-        <a class="item2" href="#" onclick="scrollToSection('work')">Projects</a>
-        <a class="item3" href="#" onclick="scrollToSection('blog')">Blog</a>
-        <a class="item4" href="mailto:sushmita094@gmail.com">Contact</a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-      <section class="hero">
-        <!-- <img src="photo.jpg" class="photo" /> -->
-        <div>
-          <h1 class="hello">Hey, I'm Sushmita!</h1>
-          <div class="bio">
-            <p>
-              Currently, I am a frontend engineer at
-              <a class="link" href="https://hapramp.com/" target="_blank">Hapramp</a>. I love creating amazing
-              user Interfaces that people enjoy using. I also write about tech
-              on my <a class="link" href="https://sushmita.hashnode.dev/" target="_blank">Blog</a> and share my journey on
-              <a class="link" href="https://twitter.com/sushmitacodes" target="_blank">Twitter</a>.
-            </p>
-          </div>
-          <div class="social">
-            <a
-              class="link"
-              href="https://www.linkedin.com/in/sushmita094/"
-              target="_blank"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              class="link"
-              href="https://twitter.com/sushmitacodes"
-              target="_blank"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              class="link"
-              href="https://github.com/sushmita094"
-              target="_blank"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              class="link"
-              href="https://codepen.io/sushmita094"
-              target="_blank"
-            >
-              <i class="fab fa-codepen"></i>
-            </a>
-            <a class="link" href="https://dev.to/sushmita094" target="_blank">
-              <i class="fab fa-dev"></i>
-            </a>
-            <a class="link" href="mailto:sushmita094@gmail.com" target="_blank">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
+  <title>Sushmita's Portfolio</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="navbar">
+      <a class="item1" href="#">About</a>
+      <a class="item2" href="#" onclick="scrollToSection('work')">Work</a>
+      <a class="item3" href="#" onclick="scrollToSection('blog')">Blog</a>
+      <a class="item4" href="mailto:sushmita094@gmail.com">Contact</a>
+    </div>
+
+    <section class="hero">
+      <!-- <img src="photo.jpg" class="photo" /> -->
+      <div>
+        <h1 class="hello">Hey, I'm Sushmita!</h1>
+        <div class="bio">
+          <p>
+            Currently, I am a frontend engineer at
+            <a class="link" href="https://hapramp.com/" target="_blank">Hapramp</a>. I love creating amazing
+            user Interfaces that people enjoy using. I also write about tech
+            on my <a class="link" href="https://sushmita.hashnode.dev/" target="_blank">Blog</a> and share my journey on
+            <a class="link" href="https://twitter.com/sushmitacodes" target="_blank">Twitter</a>.
+          </p>
         </div>
-      </section>
+        <div class="social">
+          <a class="link" href="https://www.linkedin.com/in/sushmita094/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="link" href="https://twitter.com/sushmitacodes" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="link" href="https://github.com/sushmita094" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="link" href="https://codepen.io/sushmita094" target="_blank">
+            <i class="fab fa-codepen"></i>
+          </a>
+          <a class="link" href="https://dev.to/sushmita094" target="_blank">
+            <i class="fab fa-dev"></i>
+          </a>
+          <a class="link" href="mailto:sushmita094@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <section class="about" > 
-        <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-          <span class="number">01.</span>
-          <span class="name">About Me</span>
-        </h2>
-        <div class="grid" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-          <div class="left">
-            <p>
-              Hi, I'm Sushmita Pandey. React happens to be the tool I use most
-              frequently, but I like learning new tools and frameworks very
-              much. Currently, I have been working as a Frontend Engineer at
-              Hapramp. I like to code things from scratch, and I have a
-              passion for creating smooth user experiences.
-            </p>
-            <p>
-              When it comes to Frontend Development, I really like the balance
-              between creativity and code in this field. If you ask me, Frontend
-              Development is like the best of both worlds for me.
-            </p>
-            <p>
-              When I'm not coding, you can find me singing, playing my Guitar or
-              buried in a Novel!
-            </p>
-          </div>
-          <div class="right">
-            <p class="title">Skills and Frameworks:</p>
-            <div class="skills-grid">
-              <div class="skill">HTML</div>
-              <div class="skill">CSS</div>
-              <div class="skill">Javascript</div>
-              <div class="skill">Responsive Design</div>
-              <div class="skill">React</div>
-              <div class="skill">Redux</div>
-              <div class="skill">Nextjs</div>
-              <div class="skill">Sass</div>
-              <div class="skill">Git</div>
-              <div class="skill">React Native</div>
+    <section class="about">
+      <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250"
+        data-aos-duration="1000" data-aos-once="true">
+        <span class="number">01.</span>
+        <span class="name">About Me</span>
+      </h2>
+      <div class="grid" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000"
+        data-aos-once="true">
+        <div class="left">
+          <p>
+            Hi, I'm Sushmita Pandey. React happens to be the tool I use most
+            frequently, but I like learning new tools and frameworks very
+            much. Currently, I have been working as a Frontend Engineer at
+            Hapramp. I like to code things from scratch, and I have a
+            passion for creating smooth user experiences.
+          </p>
+          <p>
+            When it comes to Frontend Development, I really like the balance
+            between creativity and code in this field. If you ask me, Frontend
+            Development is like the best of both worlds for me.
+          </p>
+          <p>
+            When I'm not coding, you can find me singing, playing my Guitar or
+            buried in a Novel!
+          </p>
+        </div>
+        <div class="right">
+          <p class="title">Skills and Frameworks:</p>
+          <div class="skills-grid">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Javascript</div>
+            <div class="skill">Responsive Design</div>
+            <div class="skill">React</div>
+            <div class="skill">Redux</div>
+            <div class="skill">Nextjs</div>
+            <div class="skill">Sass</div>
+            <div class="skill">TypeScript</div>
+            <div class="skill">Git</div>
+            <div class="skill">React Native</div>
             </ul>
           </div>
         </div>
-      </section>
+    </section>
 
-      <section id="work" class="projects">
-        <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-          <span class="number">02.</span>
-          <span class="name">Projects</span>
-        </h2>
-        <div class="content">
-          <div class="projects-grid">
-            <div class="project-card" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-              <img class="image" src="taskify.png" />
-              <div>
-                <a
-                  class="project-title"
-                  href="https://book-finder-react.netlify.app/"
-                  target="_blank"
-                  >Bookipedia</a
-                >
-                <p class="desc">
-                  Bookipedia is a book finder where you can find your favorite
-                  books in the Google Books database and filter them on various
-                  parameters.
-                </p>
-                <div class="tech-used">
-                  <span class="tech">Javascript</span>
-                  <span class="tech">React</span>
-                  <span class="tech">CSS</span>
-                  <span class="tech">Sass</span>
-                  <span class="tech">RESTful APIs</span>
-                </div>
-              </div>
+    <section id="work" class="projects">
+      <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250"
+        data-aos-duration="1000" data-aos-once="true">
+        <span class="number">02.</span>
+        <span class="name">Work</span>
+      </h2>
+      <div class="content">
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250"
+            data-aos-duration="1000" data-aos-once="true">
+            <!-- <img class="image" src="taskify.png" /> -->
+            <div>
+              <p class="project-title">Software
+                Engineer(Frontend) <span class="theme">@ Hapramp</span></p>
+              <ul class="desc">
+                <li>Currently working on GoSocial - a platform to help creators turn their passion into money</li>
+                <li>Engineering and maintaining the frontend code using TypeScript, Nextjs and Sass</li>
+              </ul>
             </div>
+          </div>
 
-            <div class="project-card" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-              <img class="image" src="taskify.png" />
-              <div>
-                <a
-                  class="project-title"
-                  href="https://notes-app-react.netlify.app/"
-                  target="_blank"
-                  >Taskify</a
-                >
-                <p class="desc">
-                  A simple and elegant solution for listing your tasks and
-                  performing functions like edit and delete on the tasks. You
-                  can also toggle between Light or Dark mode and your data is
-                  not lost on page refresh.
-                </p>
-                <div class="tech-used">
-                  <span class="tech">Javascript</span>
-                  <span class="tech">React</span>
-                  <span class="tech">CSS</span>
-                  <span class="tech">Sass</span>
-                  <span class="tech">Local Storage</span>
-                </div>
-              </div>
+          <div class="project-card" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250"
+            data-aos-duration="1000" data-aos-once="true">
+            <!-- <img class="image" src="taskify.png" /> -->
+            <div>
+              <p class="project-title">Frontend Engineer <span class="theme">@ Squareboat</span></p>
+              <ul class="desc">
+                <li>Developed and Maintained pixel perfect code for in-house and client websites, PWAs and apps using
+                  HTML, CSS, Sass, JavaScript,
+                  React and Redux</li>
+                <li>Ensured cross browser compatibility and responsiveness in all work</li>
+                <li>Clients included Niyo, Locofast, Hackr, and more</li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="blog" class="blog">
-        <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-          <span class="number">03.</span>
-          <span class="name">Blog</span>
-        </h2>
+    <section id="blog" class="blog">
+      <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250"
+        data-aos-duration="1000" data-aos-once="true">
+        <span class="number">03.</span>
+        <span class="name">Blog</span>
+      </h2>
 
-        <div class="content" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000" data-aos-once="true">
-          <a href="#" class="blog-card-link">
-            <div class="blog-card">
-              <div>
-                <p class="blog-title">
-                  How to use React Hooks - 2 most commonly used Hooks explained
-                  ✨
-                </p>
-                <p class="desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
-                  quidem beatae, eum recusandae sint iste aspernatur
-                </p>
-              </div>
-              <div class="tags">
-                <span>Javascript</span>
-                <span>React</span>
-              </div>
+      <div class="content" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000"
+        data-aos-once="true">
+        <a href="#" class="blog-card-link">
+          <div class="blog-card">
+            <div>
+              <p class="blog-title">
+                How to use React Hooks - 2 most commonly used Hooks explained
+                ✨
+              </p>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
+                quidem beatae, eum recusandae sint iste aspernatur
+              </p>
             </div>
-          </a>
-
-          <a href="#" class="blog-card-link">
-            <div class="blog-card">
-              <div>
-                <p class="blog-title">
-                  10 tips to crack the Frontend Interview
-                </p>
-                <p class="desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
-                  quidem beatae, eum recusandae sint iste aspernatur
-                </p>
-              </div>
-              <div class="tags">
-                <span>Javascript</span>
-                <span>React</span>
-              </div>
+            <div class="tags">
+              <span>Javascript</span>
+              <span>React</span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <a href="#" class="blog-card-link">
-            <div class="blog-card">
-              <div>
-                <p class="blog-title">A complete guide to CSS Flexbox ✨</p>
-                <p class="desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusamus illo minus quis, necessitatibus tenetur dolor.
-                </p>
-              </div>
-              <div class="tags">
-                <span>Javascript</span>
-                <span>React</span>
-              </div>
+        <a href="#" class="blog-card-link">
+          <div class="blog-card">
+            <div>
+              <p class="blog-title">
+                10 tips to crack the Frontend Interview
+              </p>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus illo minus quis, necessitatibus tenetur dolor. Quia
+                quidem beatae, eum recusandae sint iste aspernatur
+              </p>
             </div>
-          </a>
-        </div>
-        <div class="btn-wrapper">
-          <a
-            class="link-btn"
-            href="https://sushmita.hashnode.dev/"
-            target="_blank"
-            >Read More</a
-          >
-        </div>
-      </section>
+            <div class="tags">
+              <span>Javascript</span>
+              <span>React</span>
+            </div>
+          </div>
+        </a>
 
-      <footer>Designed and developed by Sushmita Pandey</footer>
-    </div>
+        <a href="#" class="blog-card-link">
+          <div class="blog-card">
+            <div>
+              <p class="blog-title">A complete guide to CSS Flexbox ✨</p>
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus illo minus quis, necessitatibus tenetur dolor.
+              </p>
+            </div>
+            <div class="tags">
+              <span>Javascript</span>
+              <span>React</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="btn-wrapper">
+        <a class="link-btn" href="https://sushmita.hashnode.dev/" target="_blank">Read More</a>
+      </div>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="app.js"></script>
-  </body>
+    <footer>Designed and developed by Sushmita Pandey</footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>

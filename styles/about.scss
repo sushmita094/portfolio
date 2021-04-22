@@ -29,7 +29,7 @@ section.about {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 50px;
-    // align-items: center;
+    align-items: center;
 
     @include tablet {
       // display: block;
@@ -65,54 +65,59 @@ section.about {
     }
   }
 
-  .right {
-    @include mobile {
-      display: block;
+  .photo {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .skills-grid {
+    display: flex;
+
+    .skill {
+      width: 24px;
+      height: 24px;
     }
 
-    .title {
-      font-size: 20px;
-      color: $theme;
-      margin: 0 0 30px;
+    .skill,
+    i {
+      font-size: 24px;
+      margin-right: 20px;
 
       @include mobile {
-        font-size: 17px;
+        font-size: 16px;
+      }
+
+      @include iphone5 {
+        font-size: 15px;
       }
     }
 
-    // ul {
-    //   // list-style: none;
-    //   // list-style-image: url("../star.svg");
-    //   padding-left: 0;
-    // }
+    .skill-nextjs {
+      transform: scale(1.8);
+    }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-row-gap: 24px;
+    .fa-html5 {
+      color: #e34c26;
+    }
 
-      .skill {
-        font-size: 17px;
-        // color: $text;
+    .fa-css3-alt {
+      color: #264de4;
+    }
 
-        @include mobile {
-          font-size: 16px;
-        }
+    .fa-js {
+      color: #f0db4f;
+    }
 
-        @include iphone5 {
-          font-size: 15px;
-        }
+    .fa-react {
+      color: #61dbfb;
+    }
 
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 14px;
-          height: 14px;
-          background-image: url("../star-2.svg");
-          background-size: 14px;
-          margin-right: 8px;
-        }
-      }
+    .fa-sass {
+      color: #cd6799;
+    }
+
+    .fa-git-alt {
+      color: #f14e32;
     }
   }
 }

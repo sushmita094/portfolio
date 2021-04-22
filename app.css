@@ -311,6 +311,7 @@ section.about .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 50px;
+  align-items: center;
 }
 @media (max-width: 767px) {
   section.about .grid {
@@ -343,47 +344,54 @@ section.about .left {
 section.about .left p {
   margin: 0 0 20px;
 }
-@media (max-width: 767px) {
-  section.about .right {
-    display: block;
-  }
+section.about .photo {
+  width: 100%;
+  border-radius: 20px;
 }
-section.about .right .title {
-  font-size: 20px;
-  color: #5cffa8;
-  margin: 0 0 30px;
+section.about .skills-grid {
+  display: flex;
 }
-@media (max-width: 767px) {
-  section.about .right .title {
-    font-size: 17px;
-  }
+section.about .skills-grid .skill {
+  width: 24px;
+  height: 24px;
 }
-section.about .right .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 24px;
-}
-section.about .right .skills-grid .skill {
-  font-size: 17px;
+section.about .skills-grid .skill,
+section.about .skills-grid i {
+  font-size: 24px;
+  margin-right: 20px;
 }
 @media (max-width: 767px) {
-  section.about .right .skills-grid .skill {
+  section.about .skills-grid .skill,
+section.about .skills-grid i {
     font-size: 16px;
   }
 }
 @media (max-width: 325px) {
-  section.about .right .skills-grid .skill {
+  section.about .skills-grid .skill,
+section.about .skills-grid i {
     font-size: 15px;
   }
 }
-section.about .right .skills-grid .skill::before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-image: url("../star-2.svg");
-  background-size: 14px;
-  margin-right: 8px;
+section.about .skills-grid .skill-nextjs {
+  transform: scale(1.8);
+}
+section.about .skills-grid .fa-html5 {
+  color: #e34c26;
+}
+section.about .skills-grid .fa-css3-alt {
+  color: #264de4;
+}
+section.about .skills-grid .fa-js {
+  color: #f0db4f;
+}
+section.about .skills-grid .fa-react {
+  color: #61dbfb;
+}
+section.about .skills-grid .fa-sass {
+  color: #cd6799;
+}
+section.about .skills-grid .fa-git-alt {
+  color: #f14e32;
 }
 
 section.projects {

@@ -105,10 +105,16 @@ section.blog {
       }
     }
 
+    .date-posted {
+      font-family: "Inconsolata", monospace;
+      color: rgba($theme, 0.8);
+      margin: 0;
+    }
+
     .tags {
       font-family: "Inconsolata", monospace;
       font-size: 14px;
-      color: rgba($theme, 0.8);
+      color: rgba($theme, 1);
 
       span {
         margin-right: 10px;

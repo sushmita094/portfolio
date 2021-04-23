@@ -68,6 +68,11 @@ section.about {
   .photo {
     width: 100%;
     border-radius: 20px;
+
+    @include mobile {
+      width: 80%;
+      margin-left: 10%;
+    }
   }
 
   .skills-grid {

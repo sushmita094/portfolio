@@ -348,6 +348,12 @@ section.about .photo {
   width: 100%;
   border-radius: 20px;
 }
+@media (max-width: 767px) {
+  section.about .photo {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
 section.about .skills-grid {
   display: flex;
 }
@@ -589,10 +595,15 @@ section.blog .blog-card .desc {
     margin-bottom: 20px;
   }
 }
+section.blog .blog-card .date-posted {
+  font-family: "Inconsolata", monospace;
+  color: rgba(92, 255, 168, 0.8);
+  margin: 0;
+}
 section.blog .blog-card .tags {
   font-family: "Inconsolata", monospace;
   font-size: 14px;
-  color: rgba(92, 255, 168, 0.8);
+  color: #5cffa8;
 }
 section.blog .blog-card .tags span {
   margin-right: 10px;

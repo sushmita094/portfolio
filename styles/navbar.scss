@@ -21,6 +21,7 @@
     padding: 10px 15px;
     margin: 0 15px;
     transition: all 0.25s ease;
+    cursor: pointer;
 
     &:hover {
       background-color: $theme-bg;

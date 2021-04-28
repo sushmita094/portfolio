@@ -89,7 +89,6 @@ body {
 }
 
 footer {
-  color: rgba(155, 164, 182, 0.7);
   color: rgba(92, 255, 168, 0.6);
   padding: 16px 0;
   padding-top: 100px;
@@ -121,12 +120,14 @@ footer {
 .social a {
   font-size: 20px;
   color: rgba(187, 194, 226, 0.8);
-  padding: 10px;
+  padding: 10px 12px;
   margin: 4px 0;
-  transition: all 0.25s ease-in;
+  transition: all 0.2s ease-out;
+  border-radius: 50%;
 }
 .social a:hover {
   color: #5cffa8;
+  background-color: #00210f;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .social a {
@@ -162,6 +163,7 @@ footer {
   padding: 10px 15px;
   margin: 0 15px;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 .navbar a:hover {
   background-color: #00210f;
@@ -207,12 +209,6 @@ section.hero {
     width: 60%;
     margin: 0 auto;
   }
-}
-section.hero .photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  margin-right: 80px;
 }
 section.hero .hello {
   font-family: "Merriweather", serif;
@@ -260,8 +256,23 @@ section.hero .bio {
   }
 }
 section.hero .bio .link {
+  position: relative;
   color: #5cffa8;
   text-decoration: none;
+}
+section.hero .bio .link:hover::after {
+  width: 100%;
+}
+section.hero .bio .link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #5cffa8;
+  transition: all 0.2s ease-out;
 }
 section.hero p {
   margin: 0 0 20px;
@@ -401,7 +412,7 @@ section.about .skills-grid .fa-git-alt {
 }
 
 section.projects {
-  padding: 60px 120px;
+  padding: 60px 100px;
   display: flex;
   flex-direction: column;
   color: #9ba4b6;
@@ -437,6 +448,12 @@ section.projects .content {
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section.projects .content {
+    width: 80%;
+    margin: 0 auto 60px;
+  }
 }
 @media (max-width: 767px) {
   section.projects .projects-grid {

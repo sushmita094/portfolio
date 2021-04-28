@@ -127,7 +127,6 @@ body {
 
 // footer styles
 footer {
-  color: rgba($text, 0.7);
   color: rgba($theme, 0.6);
   padding: 16px 0;
   padding-top: 100px;
@@ -158,12 +157,14 @@ footer {
   a {
     font-size: 20px;
     color: rgba($text2, 0.8);
-    padding: 10px;
+    padding: 10px 12px;
     margin: 4px 0;
-    transition: all 0.25s ease-in;
+    transition: all 0.2s ease-out;
+    border-radius: 50%;
 
     &:hover {
       color: $theme;
+      background-color: $theme-bg;
     }
 
     @include tablet {

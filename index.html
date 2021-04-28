@@ -15,14 +15,13 @@
 <body>
   <div class="wrapper">
     <div class="navbar">
-      <a class="item1" href="#">About</a>
-      <a class="item2" href="#" onclick="scrollToSection('work')">Work</a>
-      <a class="item3" href="#" onclick="scrollToSection('blog')">Blog</a>
+      <a class="item1" onclick="scrollToSection('about')">About</a>
+      <a class="item2" onclick="scrollToSection('work')">Work</a>
+      <a class="item3" onclick="scrollToSection('blog')">Blog</a>
       <a class="item4" href="mailto:sushmita094@gmail.com">Contact</a>
     </div>
 
     <section class="hero">
-      <!-- <img src="photo.jpg" class="photo" /> -->
       <div>
         <h1 class="hello">Hey, I'm Sushmita!</h1>
         <div class="bio">
@@ -57,7 +56,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id='about' class="about">
       <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="150"
         data-aos-duration="1000" data-aos-once="true">
         <span class="number">01.</span>
@@ -139,13 +138,13 @@
     </section>
 
     <section id="blog" class="blog">
-      <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250"
+      <h2 class="section-title" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="150"
         data-aos-duration="1000" data-aos-once="true">
         <span class="number">03.</span>
         <span class="name">Blog</span>
       </h2>
 
-      <div id='blogPosts' class="content" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="250" data-aos-duration="1000"
+      <div id='blogPosts' class="content" data-aos="fade" data-aos-easing="ease-out" data-aos-offset="150" data-aos-duration="1000"
         data-aos-once="true">
         <!-- <a href="#" class="blog-card-link">
           <div class="blog-card">

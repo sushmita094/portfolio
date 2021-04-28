@@ -1,6 +1,6 @@
 // projects section
 section.projects {
-  padding: 60px 120px;
+  padding: 60px 100px;
   display: flex;
   flex-direction: column;
   color: $text;
@@ -34,6 +34,11 @@ section.projects {
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
+
+    @include tablet {
+      width: 80%;
+      margin: 0 auto 60px;
+    }
   }
 
   .projects-grid {

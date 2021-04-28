@@ -1,7 +1,9 @@
 AOS.init();
 const scrollToSection = (section) => {
-  // let element = document.getElementById(section);
-  // element.scrollIntoView();
+  let element = document.getElementById(section);
+  element.scrollIntoView({
+    behavior: "smooth",
+  });
 };
 
 const query = `
@@ -40,7 +42,7 @@ async function getData() {
     date = `<p class='date-posted'>${date.getDate()} ${
       date.getMonth() + 1
     } ${date.getFullYear()}</p>`;
-    html += `<a class="blog-card-link">
+    html += `<a class="blog-card-link" href="https://sushmita.hashnode.dev/${post.slug}" target="_blank">
     <div class="blog-card">
     <div>
     ${title}

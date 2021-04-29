@@ -326,7 +326,7 @@ section.about .grid {
 }
 @media (max-width: 767px) {
   section.about .grid {
-    display: block;
+    grid-template-columns: none;
   }
 }
 section.about .left {
@@ -341,9 +341,9 @@ section.about .left {
 }
 @media (max-width: 767px) {
   section.about .left {
+    order: 2;
     font-size: 16px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    margin: 40px auto 40px;
     line-height: 1.4;
   }
 }
@@ -361,8 +361,8 @@ section.about .photo {
 }
 @media (max-width: 767px) {
   section.about .photo {
-    width: 80%;
-    margin-left: 10%;
+    width: 50%;
+    justify-self: center;
   }
 }
 section.about .skills-grid {
@@ -371,6 +371,18 @@ section.about .skills-grid {
 section.about .skills-grid .skill {
   width: 24px;
   height: 24px;
+}
+@media (max-width: 767px) {
+  section.about .skills-grid .skill {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 325px) {
+  section.about .skills-grid .skill {
+    width: 15px;
+    height: 15px;
+  }
 }
 section.about .skills-grid .skill,
 section.about .skills-grid i {

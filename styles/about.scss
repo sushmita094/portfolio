@@ -31,12 +31,8 @@ section.about {
     grid-column-gap: 50px;
     align-items: center;
 
-    @include tablet {
-      // display: block;
-    }
-
     @include mobile {
-      display: block;
+      grid-template-columns: none;
     }
   }
 
@@ -50,9 +46,9 @@ section.about {
     }
 
     @include mobile {
+      order: 2;
       font-size: 16px;
-      margin: 0 auto;
-      margin-bottom: 40px;
+      margin: 40px auto 40px;
       line-height: 1.4;
     }
 
@@ -70,8 +66,8 @@ section.about {
     border-radius: 20px;
 
     @include mobile {
-      width: 80%;
-      margin-left: 10%;
+      width: 50%;
+      justify-self: center;
     }
   }
 
@@ -81,6 +77,16 @@ section.about {
     .skill {
       width: 24px;
       height: 24px;
+
+      @include mobile {
+        width: 16px;
+        height: 16px;
+      }
+
+      @include iphone5 {
+        width: 15px;
+        height: 15px;
+      }
     }
 
     .skill,

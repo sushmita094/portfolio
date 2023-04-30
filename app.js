@@ -15,10 +15,6 @@ const query = `
         brief
         slug
         dateAdded
-        tags {
-          name
-          _id
-        }
       }
     }
   }
